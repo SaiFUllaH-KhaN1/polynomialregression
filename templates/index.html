@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body bgcolor= #355777>
+        <center>
+        <h1 style="font-family: Arial, Helvetica, sans-serif;font-size: 30; color: aliceblue;">Apply Polynomial Regression</h1><br>
+        
+        <p style="color: goldenrod; font-family: Arial, Helvetica, sans-serif;">Remember to First copy your 'Excel' column or row data and paste it in notepad, then Ctrl+A
+            to select all the pasted data and copy it to below x-axis Or y-axis data options.</p>
+        <p style="color: goldenrod; font-family: Arial, Helvetica, sans-serif;">Because, Notepad automatically seperates your data with space between them.</p>
+        <form method="POST" action="{{ url_for('regression') }}">
+            <b style="color: aliceblue; font-family: Arial, Helvetica, sans-serif;">
+            Your data's values on x-axis:  <input type="text" name="a" placeholder="Numerical data with spaces only 1 2 3..."><br><br>
+            Your data's values on y-axis:  <input type="text" name="b" placeholder="Numerical data with spaces only 3 2 5..."><br><br>
+            Degree of Polynomial Regression:  <input type="text" name="c" placeholder="1 or 2 or onwards"><br><br>
+            Graph's x-axis starting value: <input type="text" name="d" placeholder="Starting Number"><br><br>
+            Graph's x-axis ending value: <input type="text" name="e" placeholder="Ending Number"><br><br>
+            <input type="submit" value="Generate Equation"><br><br>
+        </form>
+        
+        {% if plot_image_uri %}
+            <img src="{{ plot_image_uri }}" alt="Plot Image"><br><br>
+        {% endif %}
+        
+        {% if accuracy_score %}
+            <p style="font-size: 22px; color: darkorange;">Your model accuracy is: {{ accuracy_score }} </p>
+        {% endif %}
+        
+        {% if equation_str %}
+            <p style="font-size: 22px; color: darkorange;">Your data's Polynomial Regression equation is: {{ equation_str }}</p>
+        {% endif %}
+        </center>
+    </body>
+</html>
