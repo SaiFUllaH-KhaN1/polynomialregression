@@ -9,9 +9,9 @@
         <p style="color: goldenrod; font-family: Arial, Helvetica, sans-serif;">Because, Notepad automatically seperates your data with space between them.</p>
         <form method="POST" action="{{ url_for('regression') }}">
             <b style="color: aliceblue; font-family: Arial, Helvetica, sans-serif;">
-            Your data's values on x-axis:  <input type="text" name="a" placeholder="Numerical data with spaces only 1 2 3..."><br><br>
-            Your data's values on y-axis:  <input type="text" name="b" placeholder="Numerical data with spaces only 3 2 5..."><br><br>
-            Degree of Polynomial Regression:  <input type="text" name="c" placeholder="1 or 2 or onwards"><br><br>
+            Your data's values on x-axis:  <input type="text" name="a" placeholder="Numerical data with spaces only 1 2.4 3..." size="40px"><br><br>
+            Your data's values on y-axis:  <input type="text" name="b" placeholder="Numerical data with spaces only 3.7 2 5..." size="40px"><br><br>
+            Degree of Polynomial Regression:  <input type="text" name="c" placeholder="1 or 2 or onwards, NO Float numbers!" size=""><br><br>
             Graph's x-axis starting value: <input type="text" name="d" placeholder="Starting Number"><br><br>
             Graph's x-axis ending value: <input type="text" name="e" placeholder="Ending Number"><br><br>
             <input type="submit" value="Generate Equation"><br><br>
