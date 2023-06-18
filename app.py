@@ -22,11 +22,11 @@ def regression():
 
     # Getting numerical input from the user x_axis
     values = numeric_values_x_numinput.split(' ')
-    numeric_values_x = [int(value) for value in values]
+    numeric_values_x = [float(value) for value in values]
 
     # Getting numerical input from the user y_axis
     values = numeric_values_y_numinput.split(' ')
-    numeric_values_y = [int(value) for value in values]
+    numeric_values_y = [float(value) for value in values]
 
     # Getting numerical input from the user degree of polyregrsion
     polyreg_value = int(float(polyreg_value_numinput))
